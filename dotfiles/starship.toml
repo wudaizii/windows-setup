@@ -1,0 +1,48 @@
+# ============================================
+# Starship 提示符配置（Oh My Posh 备选）
+# 放置路径: ~/.config/starship.toml
+# ============================================
+
+format = """
+[](#89b4fa)\
+$username\
+[](#a6e3a1)\
+$directory\
+[](#f9e2af)\
+$git_branch\
+$git_status\
+[](#cba6f7)\
+$fill\
+$cmd_duration\
+$time\
+[](#f38ba8)\
+$line_break\
+$character"""
+
+[username]
+show_always = true
+style_user = "bold #89b4fa"
+
+[directory]
+style = "#a6e3a1"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+style = "#f9e2af"
+
+[git_status]
+style = "#fab387"
+
+[character]
+success_symbol = "[❯](bold #a6e3a1)"
+error_symbol = "[❯](bold #f38ba8)"
+
+[cmd_duration]
+min_time = 2000
+style = "#cba6f7"
+
+[time]
+disabled = false
+format = "[%R]"
+style = "#cba6f7"

@@ -1,0 +1,21 @@
+Windows Registry Editor Version 5.00
+
+; ============================================
+; 关闭锁屏广告 & 搜索栏新闻
+; ============================================
+
+; 关闭 Windows 聚焦（锁屏广告）
+[HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\CloudContent]
+"DisableWindowsSpotlightFeatures"=dword:00000001
+
+; 关闭开始菜单推荐
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_IrisRecommendations"=dword:00000000
+
+; 关闭搜索栏 Web 结果
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
+"BingSearchEnabled"=dword:00000000
+
+; 关闭任务栏新闻和兴趣
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Feeds]
+"ShellFeedsTaskbarViewMode"=dword:00000002

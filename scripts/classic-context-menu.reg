@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; ============================================
+; 恢复 Windows 10 经典右键菜单
+; 不再需要点"显示更多选项"
+; ============================================
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""

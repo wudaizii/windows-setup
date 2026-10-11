@@ -1,0 +1,24 @@
+Windows Registry Editor Version 5.00
+
+; ============================================
+; 暂停 Windows 更新 100 年
+; 原理：将暂停截止日期设为 36500 天后
+; ============================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]
+"FlightSettingsMaxPauseDays"=dword:00008e94
+
+; ============================================
+; 禁用 Windows Update 服务
+; ============================================
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"Start"=dword:00000004
+
+; ============================================
+; 禁用自动更新检测频率
+; ============================================
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+"AUOptions"=dword:00000002
